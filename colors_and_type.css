@@ -1,0 +1,276 @@
+/* ============================================================
+   SMART/EDGE — Colors & Type Foundations
+   Tagline: Where Great Design Clicks.
+   Tone: Strategic, Result-Oriented, Technically Proficient.
+   ============================================================ */
+
+/* ---------- Web Fonts ---------- */
+/* Display:   Chakra Petch  — technical, geometric, matches the wordmark's slashed "/" energy
+   Body:      Manrope       — clean geometric sans for long-form copy
+   Mono:      JetBrains Mono — for code / metric readouts
+   NOTE: These are Google-Font substitutes. If the brand has proprietary files, drop them in fonts/
+   and swap the @font-face below. */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  /* ============================================================
+     BRAND COLORS — from the official SMART/EDGE palette
+     ============================================================ */
+  --se-black:        #1A1A1B; /* Almost Black   — hero bg, footer, headings   */
+  --se-cream:        #F9F8F3; /* Creamy White   — page bg, body sections      */
+  --se-azure:        #0056B3; /* Royal Azure    — H2/H3, links, trust signals */
+  --se-lime:         #CCFF00; /* Cyber Lime     — CTAs and high-impact accent */
+  --se-purple:       #B19CD9; /* Light Purple   — icons, dividers, 2ary brand */
+
+  /* ============================================================
+     NEUTRAL SCALE — warm-tinted greys derived from Almost Black + Cream
+     ============================================================ */
+  --se-ink-900: #1A1A1B;
+  --se-ink-800: #2B2B2D;
+  --se-ink-700: #3D3D40;
+  --se-ink-600: #5A5A5E;
+  --se-ink-500: #7A7A7F;
+  --se-ink-400: #A0A0A5;
+  --se-ink-300: #C7C7CB;
+  --se-ink-200: #E4E3DE;
+  --se-ink-100: #EFEDE6;
+  --se-ink-50:  #F9F8F3;
+  --se-white:   #FFFFFF;
+
+  /* ============================================================
+     TINTS — brand colors softened for backgrounds / fills
+     ============================================================ */
+  --se-lime-50:   #F5FFCC; /* hover wash, subtle highlight on cream */
+  --se-lime-200:  #E6FF80; /* disabled / pressed CTA */
+  --se-azure-50:  #E6F0FA;
+  --se-azure-100: #BFD6EF;
+  --se-azure-900: #00345F;
+  --se-purple-50: #F0EBFA;
+  --se-purple-200:#D6CAEA;
+
+  /* ============================================================
+     SEMANTIC COLORS — use these first; reach for brand vars only when needed
+     ============================================================ */
+  --fg-1: var(--se-ink-900);   /* primary text on cream */
+  --fg-2: var(--se-ink-700);   /* secondary body text */
+  --fg-3: var(--se-ink-500);   /* tertiary / meta / captions */
+  --fg-inv: var(--se-cream);   /* text on dark backgrounds */
+  --fg-link: var(--se-azure);
+  --fg-heading: var(--se-ink-900);
+  --fg-heading-alt: var(--se-azure);
+
+  --bg-page: var(--se-cream);
+  --bg-surface: var(--se-white);
+  --bg-surface-alt: var(--se-ink-100);
+  --bg-inverse: var(--se-black);      /* hero / footer */
+  --bg-inverse-2: var(--se-ink-800);
+
+  --accent: var(--se-lime);           /* CTAs only */
+  --accent-ink: var(--se-black);      /* text sitting on lime */
+  --accent-2: var(--se-purple);       /* decorative, icons */
+
+  --border-1: var(--se-ink-200);      /* default hairline */
+  --border-2: var(--se-ink-300);      /* stronger */
+  --border-inverse: var(--se-ink-700);
+
+  /* State */
+  --focus-ring: var(--se-lime);
+  --success: #2D8A4F;
+  --warning: #C77700;
+  --danger:  #B3261E;
+
+  /* ============================================================
+     TYPE — families
+     ============================================================ */
+  --font-display: "Barlow Condensed", "Oswald", system-ui, sans-serif;
+  --font-body:    "Barlow", system-ui, -apple-system, sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Fluid type scale — clamp(min, preferred, max) */
+  --fs-display:  clamp(3rem, 6vw + 1rem, 6.5rem);   /* hero wordmark-scale */
+  --fs-h1:       clamp(2.25rem, 3.5vw + 1rem, 4rem);
+  --fs-h2:       clamp(1.75rem, 2vw + 1rem, 2.75rem);
+  --fs-h3:       clamp(1.25rem, 1vw + 1rem, 1.75rem);
+  --fs-h4:       1.125rem;
+  --fs-body-lg:  1.125rem;
+  --fs-body:     1rem;
+  --fs-small:    0.875rem;
+  --fs-caption:  0.75rem;
+  --fs-eyebrow:  0.75rem;
+
+  --lh-tight: 1.05;
+  --lh-snug:  1.2;
+  --lh-body:  1.55;
+  --lh-loose: 1.7;
+
+  --tracking-tight:  -0.02em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.04em;
+  --tracking-eyebrow: 0.18em; /* ALL-CAPS eyebrow labels */
+
+  /* ============================================================
+     SPACING — 4pt base, exponential scale
+     ============================================================ */
+  --sp-0:  0;
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  24px;
+  --sp-6:  32px;
+  --sp-7:  48px;
+  --sp-8:  64px;
+  --sp-9:  96px;
+  --sp-10: 128px;
+
+  /* ============================================================
+     RADII — mostly tight; brand reads technical not bubbly
+     ============================================================ */
+  --r-0:    0;
+  --r-xs:   2px;
+  --r-sm:   4px;
+  --r-md:   8px;
+  --r-lg:   12px;
+  --r-xl:   20px;
+  --r-pill: 999px;
+
+  /* ============================================================
+     SHADOWS — restrained; crisp not fluffy
+     ============================================================ */
+  --shadow-xs: 0 1px 2px rgba(26,26,27,0.06);
+  --shadow-sm: 0 2px 6px rgba(26,26,27,0.08);
+  --shadow-md: 0 8px 20px rgba(26,26,27,0.10);
+  --shadow-lg: 0 18px 40px rgba(26,26,27,0.14);
+  --shadow-lime: 0 6px 0 0 var(--se-black); /* hard offset — used on CTAs for emphasis */
+
+  /* ============================================================
+     MOTION
+     ============================================================ */
+  --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:   120ms;
+  --dur-base:   220ms;
+  --dur-slow:   360ms;
+
+  /* ============================================================
+     LAYOUT
+     ============================================================ */
+  --content-width: 1200px;
+  --content-width-narrow: 720px;
+  --gutter: clamp(16px, 3vw, 32px);
+}
+
+/* ============================================================
+   BASE RESETS + ELEMENT STYLES
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-page);
+  color: var(--fg-1);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Headings — display family, tight tracking, heavy weight */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--lh-tight);
+  color: var(--fg-heading);
+  margin: 0 0 var(--sp-4);
+  text-wrap: balance;
+}
+
+h1 { font-size: var(--fs-h1); color: var(--fg-heading); }
+h2 { font-size: var(--fs-h2); color: var(--fg-heading-alt); } /* Azure per brand rules */
+h3 { font-size: var(--fs-h3); color: var(--fg-heading-alt); }
+h4 { font-size: var(--fs-h4); color: var(--fg-heading); letter-spacing: 0; }
+
+/* Display class — hero wordmark-scale */
+.display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-display);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: var(--fg-heading);
+}
+
+/* Eyebrow — small ALL CAPS label, often precedes a heading */
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: var(--fs-eyebrow);
+  font-weight: 600;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--se-azure);
+}
+
+/* Body copy */
+p {
+  margin: 0 0 var(--sp-4);
+  color: var(--fg-2);
+  text-wrap: pretty;
+  max-width: 64ch;
+}
+.lede { font-size: var(--fs-body-lg); color: var(--fg-1); }
+small, .small { font-size: var(--fs-small); color: var(--fg-3); }
+.caption { font-size: var(--fs-caption); color: var(--fg-3); letter-spacing: 0.02em; }
+
+/* Links */
+a {
+  color: var(--fg-link);
+  text-decoration: none;
+  background-image: linear-gradient(var(--se-lime), var(--se-lime));
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  background-position: 0 100%;
+  transition: background-size var(--dur-base) var(--ease-out), color var(--dur-base);
+}
+a:hover { background-size: 100% 2px; }
+a:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: var(--r-xs);
+}
+
+/* Code / mono */
+code, kbd, pre, samp {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+}
+code {
+  background: var(--se-ink-100);
+  padding: 0.15em 0.4em;
+  border-radius: var(--r-xs);
+  color: var(--se-ink-900);
+}
+
+/* Selection — the lime is the brand highlight */
+::selection { background: var(--se-lime); color: var(--se-black); }
+
+/* Utility: invert for dark sections */
+.on-dark {
+  background: var(--bg-inverse);
+  color: var(--fg-inv);
+}
+.on-dark h1, .on-dark h2, .on-dark h3, .on-dark h4 { color: var(--fg-inv); }
+.on-dark h2, .on-dark h3 { color: var(--se-lime); } /* alt: lime pops on black */
+.on-dark p { color: var(--se-ink-300); }
+.on-dark a { color: var(--se-lime); }
+
+/* The signature SMART/EDGE lockup treatment — a slash accent */
+.slash-accent {
+  color: var(--se-lime);
+  font-weight: 700;
+  display: inline-block;
+  transform: skewX(-8deg);
+  padding: 0 0.05em;
+}

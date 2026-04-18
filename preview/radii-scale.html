@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Barlow:wght@600&display=swap">
+<link rel="stylesheet" href="_card.css">
+<style>
+  body { padding: 18px; }
+  .row { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; }
+  .cell { display:flex; flex-direction:column; align-items:center; gap: 6px; }
+  .box { width: 62px; height: 62px; background:#1A1A1B; border: 1px solid #1A1A1B; }
+  .tag { font-family:"JetBrains Mono"; font-size:10px; color:#3D3D40; }
+  .px  { font-family:"JetBrains Mono"; font-size:10px; color:#7A7A7F; }
+</style></head><body>
+  <div class="row">
+    <div class="cell"><div class="box" style="border-radius:0"></div><span class="tag">r-0</span><span class="px">0</span></div>
+    <div class="cell"><div class="box" style="border-radius:2px"></div><span class="tag">r-xs</span><span class="px">2px</span></div>
+    <div class="cell"><div class="box" style="border-radius:4px"></div><span class="tag">r-sm</span><span class="px">4px</span></div>
+    <div class="cell"><div class="box" style="border-radius:8px"></div><span class="tag">r-md</span><span class="px">8px</span></div>
+    <div class="cell"><div class="box" style="border-radius:12px"></div><span class="tag">r-lg</span><span class="px">12px</span></div>
+    <div class="cell"><div class="box" style="border-radius:20px"></div><span class="tag">r-xl</span><span class="px">20px</span></div>
+    <div class="cell"><div class="box" style="border-radius:999px"></div><span class="tag">r-pill</span><span class="px">full</span></div>
+  </div>
+</body></html>

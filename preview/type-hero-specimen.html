@@ -1,0 +1,64 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;500&display=swap">
+<link rel="stylesheet" href="_card.css">
+<style>
+  body {
+    padding: 0; margin: 0; background: #1A1A1B;
+    min-height: 100vh;
+    /* Faint grid overlay */
+    background-image:
+      linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+    background-size: 68px 68px;
+  }
+  .hero { padding: 48px 56px 56px; color: #F9F8F3; max-width: 1000px; }
+  .eyebrow {
+    font-family: "Barlow"; font-weight: 500; font-size: 13px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: #B19CD9; margin: 0 0 22px;
+  }
+  h1 {
+    font-family: "Barlow Condensed"; font-weight: 800;
+    font-size: clamp(64px, 9vw, 108px);
+    line-height: 0.92; letter-spacing: -0.01em;
+    text-transform: uppercase;
+    margin: 0 0 28px;
+    color: #F9F8F3;
+  }
+  h1 .lime { color: #CCFF00; display: block; }
+  p {
+    font-family: "Barlow"; font-weight: 400;
+    font-size: 17px; line-height: 1.55;
+    color: #A0A0A5; max-width: 46ch; margin: 0 0 32px;
+  }
+  .cta-row { display:flex; gap: 14px; }
+  .btn {
+    font-family: "Barlow Condensed"; font-weight: 700;
+    font-size: 15px; letter-spacing: 0.02em;
+    padding: 14px 22px; border-radius: 4px;
+    display:inline-flex; align-items:center; gap: 10px;
+    text-decoration:none; cursor:pointer; border: 1px solid transparent;
+    transition: box-shadow 220ms cubic-bezier(.22,1,.36,1), background 180ms, color 180ms;
+  }
+  .btn--primary { background:#CCFF00; color:#1A1A1B; }
+  .btn--primary:hover { box-shadow: 0 0 0 4px rgba(204,255,0,0.28), 0 0 28px 4px rgba(204,255,0,0.55); }
+  .btn--ghost { background: transparent; color: #F9F8F3; border-color: #3D3D40; }
+  .btn--ghost:hover { background: #2B2B2D; border-color:#5A5A5E; }
+  .btn .arrow { width: 14px; height: 14px; }
+</style></head><body>
+  <section class="hero">
+    <div class="eyebrow">Charleston, SC · Digital Marketing Agency</div>
+    <h1>
+      We Build Brands<br/>
+      <span class="lime">That Demand</span>
+      Attention.
+    </h1>
+    <p>SmartEdge is the creative force for founders and leaders who refuse to settle. Strategy-driven design that converts browsers into buyers.</p>
+    <div class="cta-row">
+      <a class="btn btn--primary">Book a Discovery Call
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a class="btn btn--ghost">View Our Work</a>
+    </div>
+  </section>
+</body></html>
