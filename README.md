@@ -184,3 +184,4 @@ No icon set was provided in the brief. The guidance calls for **Light Purple (#B
 1. **Typography confirmed:** Barlow Condensed (headers) + Barlow (body). The wordmark itself remains the proprietary face shown in the supplied logo files.
 2. **Icon set** — Lucide used as the default library. Swap if the brand has its own.
 3. **No codebase or Figma** was provided; component styling is inferred from the brand rules. If a live site or Figma exists, share it and components will be pinned to the real source.
+
