@@ -20,3 +20,4 @@ If the user invokes this skill without any other guidance, ask them what they wa
 - The signature CTA is a lime-filled button with a `0 6px 0 0 var(--se-black)` hard-offset shadow — looks like a stamped tile.
 - Corner radii stay tight (2–12px). No bubbly cards.
 - No colored left-border card accents. No dashed borders. No parallax. No bounces.
+
